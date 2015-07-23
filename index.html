@@ -18,10 +18,12 @@
 .blue { color: #23879e !important; }		.bluebg { background-color: #23879e !important; }
 .yellow { color: #FFC133 !important; }		.yellowbg { background-color: #FFC133 !important; }
 .red { color: #FF4B33 !important; }		.redbg { background-color: #FF4B33 !important; }
-.green { color: #26BF4E !important; }		.greenbg { background-color: #26BF4E !important; }
+.tan { color: #BB8844 !important; }		.tanbg { background-color: #BB8844 !important; }
 .white { color: #fff !important; }
 
 h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal; text-transform: uppercase;}
+
+.row { margin-bottom: 2em; }
 
 .protector { position: relative; z-index: 1; margin-bottom: 2em; }
 .banner { 
@@ -30,7 +32,7 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal
 	text-align: center; 
 	margin: 0 auto; 
 	font-weight: 100 !important; 
-	letter-spacing: 0.25em;
+	letter-spacing: 0.15em;
 }
 
 .banner:before, .banner:after {
@@ -63,9 +65,9 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal
 /* Column Grids End */
 
 .counter { background-color: none; padding: 20px 0;}
-.count-title { font-size: 40px; font-weight: 400 !important;  margin-top: 10px; line-height: 0.5; text-align: center; color: #ff9933 !important; }
-.count-text { font-size: 13px; font-weight: 100;  margin: 0 auto; text-align: center; }
-.fa-5x { margin: 0 auto; float: none; display: table; color: #ff9933; }
+.count-title { font-size: 40px; font-weight: 400 !important;  margin-top: 10px; line-height: 0.5; text-align: center;}
+.count-text { font-size: 1.5em; font-weight: 100;  margin: 0 auto; text-align: center; }
+.fa-5x { margin: 0 auto; float: none; display: table;}
 
     </style>
 <script type="text/javascript">
@@ -77,9 +79,9 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal
 
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name" class="white">2015 YTD Analytics</h1>
-      <h2 class="project-tagline" class="white">the badass numbers for the year of the ram</h2>
+    <section class="page-header orangebg">
+      <h1 class="project-name white">2015 YTD Analytics</h1>
+      <h2 class="project-tagline white">the badass numbers for the year of the ram</h2>
       <a href="https://github.com/onlyjamie/2015ytd" class="btn">View on GitHub</a>
       <a href="https://github.com/onlyjamie/2015ytd/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/onlyjamie/2015ytd/tarball/master" class="btn">Download .tar.gz</a>
@@ -90,20 +92,20 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal
       
    <div class="row large-uncollapse medium-uncollapse">
     <div class="counter large-4 medium-4 columns">
-      <i class="fa fa-map-marker fa-5x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="191" data-speed="500"></h2>
+      <i class="fa fa-map-marker fa-5x orange"></i>
+      <h2 class="timer count-title orange" id="count-number" data-to="191" data-speed="500"></h2>
        <p class="count-text ">races &amp; events</p>
     </div>
 
     <div class="counter large-4 medium-4 columns">
-      <i class="fa fa-users fa-5x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="589779" data-speed="500"></h2>
+      <i class="fa fa-users fa-5x orange"></i>
+      <h2 class="timer count-title orange" id="count-number" data-to="589779" data-speed="500"></h2>
       <p class="count-text ">participants across all events</p>
     </div>
 
     <div class="counter large-4 medium-4 columns end">
-      <i class="fa fa-camera fa-5x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="4497159" data-speed="500"></h2>
+      <i class="fa fa-camera fa-5x orange"></i>
+      <h2 class="timer count-title orange" id="count-number" data-to="4497159" data-speed="500"></h2>
       <p class="count-text ">total photos taken</p>
     </div>
 </div>
@@ -113,21 +115,43 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal
       
    <div class="row large-uncollapse medium-uncollapse">
     <div class="counter large-4 medium-4 columns">
-      <i class="fa fa-user fa-5x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="599433" data-speed="500"></h2>
+      <i class="fa fa-user fa-5x yellow"></i>
+      <h2 class="timer count-title yellow" id="count-number" data-to="599433" data-speed="500"></h2>
        <p class="count-text ">unique visitors</p>
     </div>
 
     <div class="counter large-4 medium-4 columns">
-      <i class="fa fa-laptop fa-5x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="57506305" data-speed="500"></h2>
+      <i class="fa fa-laptop fa-5x yellow"></i>
+      <h2 class="timer count-title yellow" id="count-number" data-to="57506305" data-speed="500"></h2>
       <p class="count-text ">total pageviews</p>
     </div>
 
     <div class="counter large-4 medium-4 columns end">
-      <i class="fa fa-clock-o fa-5x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="7.22" data-speed="500"></h2>
+      <i class="fa fa-clock-o fa-5x yellow"></i>
+      <h2 class="timer count-title yellow" id="count-number" data-to="7.22" data-speed="500"></h2>
       <p class="count-text ">average time on site (minutes)</p>
+    </div>
+</div>  
+
+<div class="protector"><h1 class="banner tanbg">actions</h1></div>
+      
+   <div class="row large-uncollapse medium-uncollapse">
+    <div class="counter large-4 medium-4 columns">
+      <i class="fa fa-download fa-5x tan"></i>
+      <h2 class="timer count-title tan" id="count-number">1.11</h2>
+       <p class="count-text ">average downloads per unique</p>
+    </div>
+
+    <div class="counter large-4 medium-4 columns">
+      <i class="fa fa-facebook fa-5x tan"></i>
+      <h2 class="timer count-title tan" id="count-number">5%</h2>
+       <p class="count-text ">Facebook shares</p>
+    </div>
+
+    <div class="counter large-4 medium-4 columns end">
+      <i class="fa fa-envelope fa-5x tan"></i>
+      <h2 class="timer count-title tan" id="count-number">9.6%</h2>
+       <p class="count-text ">email shares</p>
     </div>
 </div>  
 
