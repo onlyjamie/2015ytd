@@ -23,34 +23,24 @@
 
 h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal; text-transform: uppercase;}
 
-.banner { background-color: #ff4b33; color: #fff; width: 50%; }
+.banner { background-color: #ff9933; color: #ffffff; width: 50%; text-align: center; }
 
-h1.banner:after
-{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: 0px;
-	top: 100%;
-	border-width: 5px 10px;
-	border-style: solid;
-	border-color: #ffc133 #ffc133 transparent transparent;
+.banner:before, .banner:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #FF4B33 transparent transparent transparent;
+ bottom: -1em;
 }
-
-h1.banner:before
-{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	right: 0px;
-	top: 100%;
-	border-width: 5px 10px;
-	border-style: solid;
-	border-color: #ffc133 transparent transparent #ffc133;
+.banner:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
 }
-
+.banner:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
 
 
   body {
