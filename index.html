@@ -53,6 +53,13 @@
 .fa-5x { margin: 0 auto; float: none; display: table; color: #ff9933; }
 
     </style>
+<script type="text/javascript">
+   (function() {
+      var string = numeral(1000).format('0,0');
+   })();
+// '1,000'
+</script>
+
   </head>
   <body>
     <section class="page-header">
@@ -206,10 +213,7 @@ jQuery(function ($) {
 <script src='//codepen.io/assets/editor/live/css_live_reload_init.js'></script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
-<script>
-	var string = numeral(1000).format('0,0');
-// '1,000'
-</script>
+
   </body>
 </html>
 
