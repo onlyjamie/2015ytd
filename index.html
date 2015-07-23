@@ -21,7 +21,37 @@
 .green { color: #26BF4E !important; }
 .white { color: #fff !important; }
 
-h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: 900 !important;}
+h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal; text-transform: uppercase;}
+
+.banner { background-color: #ff4b33; color: #fff; width: 50%; }
+
+h1.banner:after
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #ffc133 #ffc133 transparent transparent;
+}
+
+h1.banner:before
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #ffc133 transparent transparent #ffc133;
+}
+
+
 
   body {
   font-family: 'Roboto' !important;
@@ -36,7 +66,7 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: 900 !i
 
 .counter { background-color: none; padding: 20px 0;}
 .count-title { font-size: 40px; font-weight: 400 !important;  margin-top: 10px; line-height: 0.5; text-align: center; color: #ff9933 !important; }
-.count-text { font-size: 13px; font-weight: normal;  margin: 0 auto; text-align: center; }
+.count-text { font-size: 13px; font-weight: 100;  margin: 0 auto; text-align: center; }
 .fa-5x { margin: 0 auto; float: none; display: table; color: #ff9933; }
 
     </style>
@@ -58,7 +88,7 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: 900 !i
     </section>
 
     <section class="main-content">
-      <h1 class="red">Events</h1>
+      <h1 class="banner">Events</h1>
    <div class="row large-uncollapse medium-uncollapse">
     <div class="counter large-4 medium-4 columns">
       <i class="fa fa-map-marker fa-5x"></i>
