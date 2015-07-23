@@ -23,7 +23,8 @@
 
 h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal; text-transform: uppercase;}
 
-.banner { background-color: #ff9933; color: #ffffff; width: 50%; text-align: center; }
+.protector { position: relative; z-index: 1; }
+.banner { background-color: #ff9933; color: #ffffff !important; width: 50%; text-align: center; }
 
 .banner:before, .banner:after {
  content: "";
@@ -78,7 +79,8 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal
     </section>
 
     <section class="main-content">
-      <h1 class="banner">Events</h1>
+      <div class="protector"><h1 class="banner">Events</h1></div>
+      
    <div class="row large-uncollapse medium-uncollapse">
     <div class="counter large-4 medium-4 columns">
       <i class="fa fa-map-marker fa-5x"></i>
