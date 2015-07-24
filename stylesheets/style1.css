@@ -63,7 +63,8 @@
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-	color: #e3fcb1;
+	color: #23879e;
+	text-decoration: none;
 }
 
 /* Effects */
