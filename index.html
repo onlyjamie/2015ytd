@@ -15,6 +15,26 @@
     
     <link rel="stylesheet" type="text/css" href="/gfu/css/foundation.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/style1.css" />
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
+    
+  <script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+	</script>
+ 
     <script src="js/modernizr.custom.js"></script>
     
 <style type="text/css">
@@ -94,11 +114,11 @@ background: rgba(0,0,0,0,5) !important;
 
       <h1 class="project-name white">2015 YTD Analytics</h1>
       <h2 class="project-tagline white">the badass numbers for the year of the ram</h2>
-      <button id="trigger-overlay" type="button" class="btn">Menu</button>
+      <button id="trigger-overlay" type="button" class="btn"><i class="fa fa-bars fa-2x white"></i>Menu</button>
     </section>
 
     <section class="main-content">
-<div class="protector"><h1 class="banner orangebg">Events</h1></div>
+<div class="protector"><h1 class="banner orangebg" id="events">Events</h1></div>
       
    <div class="row large-uncollapse medium-uncollapse">
     <div class="counter large-4 medium-4 columns">
@@ -121,7 +141,7 @@ background: rgba(0,0,0,0,5) !important;
 </div>
 
 
-<div class="protector"><h1 class="banner yellowbg">Traffic</h1></div>
+<div class="protector"><h1 class="banner yellowbg" id="traffic">Traffic</h1></div>
       
    <div class="row large-uncollapse medium-uncollapse">
     <div class="counter large-4 medium-4 columns">
@@ -143,7 +163,7 @@ background: rgba(0,0,0,0,5) !important;
     </div>
 </div>  
 
-<div class="protector"><h1 class="banner bluebg">actions</h1></div>
+<div class="protector"><h1 class="banner bluebg" id="actions">actions</h1></div>
       
    <div class="row large-uncollapse medium-uncollapse">
     <div class="counter large-4 medium-4 columns">
@@ -285,9 +305,9 @@ jQuery(function ($) {
 			<button type="button" class="overlay-close">X</button>
 			<nav>
 				<ul>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">Actions</a></li>
-					<li><a href="#">Traffic</a></li>
+					<li><a href="#events">Events</a></li>
+					<li><a href="#traffic">Traffic</a></li>
+					<li><a href="#actions">Actions</a></li>
 				</ul>
 			</nav>
 		</div>
