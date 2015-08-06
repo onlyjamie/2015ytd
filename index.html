@@ -14,7 +14,7 @@
     <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'>
     
     <link rel="stylesheet" type="text/css" href="/gfu/css/foundation.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/menu_cornermorph.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style1.css" />
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
     
   <script>
@@ -102,19 +102,9 @@ background: rgba(0,0,0,0,5) !important;
     <section class="page-header" style="background-image: url(http://i.imgur.com/XpJ67Wn.jpg); background-size: cover; background-position: center;">
 
       <h1 class="project-name white">2015 YTD Analytics</h1>
-      <h2 class="project-tagline white">last updated july 25, 2015</h2>
-      <button class="menu-button btn" id="open-button"><i class="fa fa-bars fa-2x white"></i>Menu</button>
+      <h2 class="project-tagline white">the badass numbers for the year of the ram</h2>
+      <button id="trigger-overlay" type="button" class="btn"><i class="fa fa-bars fa-2x white"></i>Menu</button>
     </section>
-    
-<div class="menu-wrap">
-	<nav class="menu">
-		<div class="link-list">
-			<a href="#events"><span>Events</span></a>
-			<a href="#traffic"><span>Traffic</span></a>
-			<a href="#actions"><span>Actions</span></a>
-		</div>
-	</nav>
-</div>
 
     <section class="main-content">
 <div class="protector"><h1 class="banner orangebg" id="events">Events</h1></div>
@@ -297,7 +287,18 @@ jQuery(function ($) {
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
 
-	<script src="js/classie.js"></script>
-	<script src="js/main.js"></script>
+		<!-- open/close -->
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close">X</button>
+			<nav>
+				<ul>
+					<li><a href="#events">Events</a></li>
+					<li><a href="#traffic">Traffic</a></li>
+					<li><a href="#actions">Actions</a></li>
+				</ul>
+			</nav>
+		</div>
+		<script src="js/classie.js"></script>
+		<script src="js/demo1.js"></script>
   </body>
 </html>
