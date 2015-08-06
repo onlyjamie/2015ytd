@@ -96,7 +96,13 @@ background: rgba(0,0,0,0,5) !important;
       visibility: hidden;
     }
     
-    </style>
+.persist-header {
+	z-index: 1000;
+	background-color: rgb(255,153,51,0.9);
+}
+
+</style>
+
 <script type="text/javascript">
    (function() {
       var string = numeral(1000).format('0,0');
@@ -150,18 +156,18 @@ background: rgba(0,0,0,0,5) !important;
   
   <body>
   	
-<article class="persist-area">
-   <h1 class="persist-header">
-      <a href="#events" class="btn">Events</a>
-      <a href="#traffic" class="btn">Traffic</a>
-      <a href="#actions" class="btn">Actions</a>
-
     <section class="page-header" style="background-image: url(http://i.imgur.com/XpJ67Wn.jpg); background-size: cover; background-position: center;">
 
       <h1 class="project-name white">2015 YTD Analytics</h1>
       <h2 class="project-tagline white">the badass numbers for the year of the ram</h2>
 
     </section>
+    
+<article class="persist-area">
+   <h1 class="persist-header">
+      <a href="#events" class="btn">Events</a>
+      <a href="#traffic" class="btn">Traffic</a>
+      <a href="#actions" class="btn">Actions</a>
 
     <section class="main-content">
 <div class="protector"><h1 class="banner orangebg" id="events">Events</h1></div>
