@@ -88,6 +88,13 @@ background: rgba(0,0,0,0,5) !important;
 .count-title { font-size: 2.5em; font-weight: 400 !important;  margin-top: 10px; line-height: 0.5; text-align: center;}
 .count-text { font-size: 1.3em; font-weight: 100;  margin: 0 auto; line-height: 1; text-align: center; }
 .fa-5x { margin: 0 auto; float: none; display: table;}
+
+    .floatingHeader {
+      position: fixed;
+      top: 0;
+      visibility: hidden;
+    }
+    
     </style>
 <script type="text/javascript">
    (function() {
@@ -96,16 +103,65 @@ background: rgba(0,0,0,0,5) !important;
 // '1,000'
 </script>
 
+ <script>
+    function UpdateTableHeaders() {
+       $(".persist-area").each(function() {
+
+           var el             = $(this),
+               offset         = el.offset(),
+               scrollTop      = $(window).scrollTop(),
+               floatingHeader = $(".floatingHeader", this)
+
+           if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+               floatingHeader.css({
+                "visibility": "visible"
+               });
+           } else {
+               floatingHeader.css({
+                "visibility": "hidden"
+               });
+           };
+       });
+    }
+
+    // DOM Ready
+    $(function() {
+
+       var clonedHeaderRow;
+
+       $(".persist-area").each(function() {
+           clonedHeaderRow = $(".persist-header", this);
+           clonedHeaderRow
+             .before(clonedHeaderRow.clone())
+             .css("width", clonedHeaderRow.width())
+             .addClass("floatingHeader");
+
+       });
+
+       $(window)
+        .scroll(UpdateTableHeaders)
+        .trigger("scroll");
+
+    });
+  </script>
+  
   </head>
+  
   <body>
+  	
+<article class="persist-area">
+   <h1 class="persist-header">
+      <a href="#events" class="btn">Events</a>
+      <a href="#traffic" class="btn">Traffic</a>
+      <a href="#actions" class="btn">Actions</a>
+</article>
+
   
     <section class="page-header" style="background-image: url(http://i.imgur.com/XpJ67Wn.jpg); background-size: cover; background-position: center;">
 
       <h1 class="project-name white">2015 YTD Analytics</h1>
       <h2 class="project-tagline white">the badass numbers for the year of the ram</h2>
-      <a href="#events" class="btn">Events</a>
-      <a href="#traffic" class="btn">Traffic</a>
-      <a href="#actions" class="btn">Actions</a>
+
     </section>
 
     <section class="main-content">
@@ -289,18 +345,5 @@ jQuery(function ($) {
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
 
-		<!-- open/close -->
-		<div class="overlay overlay-hugeinc">
-			<button type="button" class="overlay-close">X</button>
-			<nav>
-				<ul>
-					<li><a href="#events">Events</a></li>
-					<li><a href="#traffic">Traffic</a></li>
-					<li><a href="#actions">Actions</a></li>
-				</ul>
-			</nav>
-		</div>
-		<script src="js/classie.js"></script>
-		<script src="js/demo1.js"></script>
   </body>
 </html>
