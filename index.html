@@ -21,7 +21,6 @@
 	$(function() {
 	  $('a[href*=#]:not([href=#])').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
 	      var target = $(this.hash);
 	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	      if (target.length) {
@@ -45,13 +44,9 @@
 .red { color: #FF4B33 !important; }		.redbg { background-color: #FF4B33 !important; }
 .tan { color: #BB8844 !important; }		.tanbg { background-color: #BB8844 !important; }
 .white { color: #fff !important; }
-
 h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal; text-transform: uppercase;}
-
 .project-tagline { font-family: 'Roboto', sans-serif; font-weight: 100; text-transform: none; }
-
 .row { margin-bottom: 2em; }
-
 .protector { position: relative; z-index: 1; margin-bottom: 2em; }
 .banner { 
 	color: #ffffff !important; 
@@ -61,7 +56,6 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal
 	font-weight: 100 !important; 
 	letter-spacing: 0.05em;
 }
-
 .banner:before, .banner:after {
  content: "";
  position: absolute;
@@ -78,11 +72,9 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: 'Lato' !important; font-weight: normal
  right: 25%;
  border-width: 0.5em 0.5em 0 0;
 }
-
 .page-header {
 background: rgba(0,0,0,0,5) !important;
 }
-
   body {
   font-family: 'Roboto' !important;
   font-weight: 100;
@@ -90,15 +82,12 @@ background: rgba(0,0,0,0,5) !important;
   color: #808080;
   	text-align: center;	
 }
-
 .end { margin-right: 0 !important; }
 /* Column Grids End */
-
 .counter { background-color: none; padding: 20px 0;}
 .count-title { font-size: 2.5em; font-weight: 400 !important;  margin-top: 10px; line-height: 0.5; text-align: center;}
 .count-text { font-size: 1.3em; font-weight: 100;  margin: 0 auto; line-height: 1; text-align: center; }
 .fa-5x { margin: 0 auto; float: none; display: table;}
-
     </style>
 <script type="text/javascript">
    (function() {
@@ -117,7 +106,7 @@ background: rgba(0,0,0,0,5) !important;
       <button class="menu-button btn" id="open-button"><i class="fa fa-bars fa-2x white"></i></button>
     </section>
     
-<!-- <div class="menu-wrap">
+<div class="menu-wrap">
 	<nav class="menu">
 		<div class="link-list">
 			<a href="index.html#events"><span>Events</span></a>
@@ -125,7 +114,7 @@ background: rgba(0,0,0,0,5) !important;
 			<a href="index.html#actions"><span>Actions</span></a>
 		</div>
 	</nav>
-</div> -->
+</div>
 
     <section class="main-content">
 <div class="protector"><h1 class="banner orangebg" id="events">Events</h1></div>
@@ -285,7 +274,6 @@ background: rgba(0,0,0,0,5) !important;
 		return value.toFixed(settings.decimals);
 	}
 }(jQuery));
-
 jQuery(function ($) {
   // custom formatting example
   $('#count-number').data('countToOptions', {
@@ -303,15 +291,13 @@ jQuery(function ($) {
 	$this.countTo(options);
   }
 });
-
 //@ sourceURL=pen.js
 </script>
 <script src='//codepen.io/assets/editor/live/css_live_reload_init.js'></script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
 
-<!--	<script src="js/classie.js"></script>
-	<script src="js/main.js"></script> -->
+	<script src="js/classie.js"></script>
+	<script src="js/main.js"></script>
   </body>
 </html>
-
